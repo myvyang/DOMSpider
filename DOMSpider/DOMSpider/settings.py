@@ -17,5 +17,9 @@ DOWNLOADER_MIDDLEWARES = {
 SPIDER_MODULES = ['DOMSpider.spiders']
 NEWSPIDER_MODULE = 'DOMSpider.spiders'
 
+SCHEDULER_ORDER = 'BFO'
+
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'DOMSpider (+http://www.yourdomain.com)'
