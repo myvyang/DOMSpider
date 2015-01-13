@@ -7,21 +7,24 @@ from scrapy.contrib.linkextractors import LinkExtractor
 
 class UrlsSpider(CrawlSpider):
     name = "urls"
-    allowed_domains = ['seu.edu.cn']
+    allowed_domains = ['chong.qq.com']
     start_urls = [
-        "http://www.seu.edu.cn"
+        "http://chong.qq.com/game/"
     ]
-    store_file = "store"
 
     rules = (
         Rule(LinkExtractor(allow=()), callback='parse_item', follow = True),
     )
 
     def parse_item(self, response):
-        with open("store", "a+") as f:
-            for url in response.xpath('//a/@href'):
+
+        store_file = "chong.qq.store"
+
+        with open(store_file, "a+") as f:
+            f.write(response.url.encode('utf-8'))
+            #for url in response.xpath('//a/@href'):
                 #print '---> ', url
-                f.write(url.extract().encode('utf-8') + '\n')
+            #    f.write(url.extract().encode('utf-8') + '\n')
 
 
 
