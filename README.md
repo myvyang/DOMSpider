@@ -3,6 +3,7 @@
 Spider base Scrapy for crawling web 2.0 page
 
 usage:
+-----
     
     install PySide, scrapy, redis
 
