@@ -3,7 +3,7 @@ from scrapy.http import Request, HtmlResponse
 
 import jwebkit
 
-max_sec = 1
+max_sec = 0.1
 
 
 class WebkitDownloader(object):
