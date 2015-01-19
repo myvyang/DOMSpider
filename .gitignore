@@ -1,3 +1,5 @@
 *.store
 *.pyc
 store
+*.rdb
+*.py~

@@ -11,7 +11,7 @@
 BOT_NAME = 'DOMSpider'
 
 DOWNLOADER_MIDDLEWARES = {
-    'DOMSpider.downloader.WebkitDownloader': 1000,
+#    'DOMSpider.downloader.WebkitDownloader': 1000,
 }
 
 SPIDER_MODULES = ['DOMSpider.spiders']
@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'DOMSpider.spiders'
 
 SCHEDULER_ORDER = 'BFO'
 
-CONCURRENT_REQUESTS_PER_SPIDER = 40
+CONCURRENT_REQUESTS_PER_DOMAIN = 40
 
 # Enables scheduling storing requests queue in redis.
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"

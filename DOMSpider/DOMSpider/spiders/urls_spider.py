@@ -7,9 +7,9 @@ from scrapy.contrib.linkextractors import LinkExtractor
 
 class UrlsSpider(CrawlSpider):
     name = "urls"
-    allowed_domains = ['taobao.com']
+    allowed_domains = ['qq.com']
     start_urls = [
-        "http://www.taobao.com"
+        "http://www.qq.com"
     ]
 
     rules = (
@@ -18,7 +18,7 @@ class UrlsSpider(CrawlSpider):
 
     def parse_item(self, response):
 
-        store_file = "taobao.store"
+        store_file = "qq.store"
 
         with open(store_file, "a+") as f:
             f.write(response.url.encode('utf-8') + '\n')
